@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="A Google Apps Script pipeline that extracts supported document content, creates structured Notion pages and preserves links to original Google Drive files.">
+<meta property="og:title" content="Drive-to-Notion Migration Pipeline">
+<meta property="og:description" content="A Google Apps Script pipeline that extracts supported document content, creates structured Notion pages and preserves links to original Google Drive files.">
+<meta property="og:type" content="article">
+<title>Drive-to-Notion Migration Pipeline | Stéphanie Nadeau</title>
+<link rel="icon" type="image/png" href="../assets/logo/symbol.png">
+<link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="case-page">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-nav"><div class="wrap nav-inner">
+<a href="../index.html#top" aria-label="Stéphanie Nadeau home"><img class="nav-logo" src="../assets/logo/logo-horizontal.png" alt="Stéphanie Nadeau — Language, AI Systems and Automation"></a>
+<button class="menu" aria-label="Open navigation" aria-expanded="false">☰</button>
+<nav class="nav-links" aria-label="Main navigation"><a href="../index.html#services">Services</a><a href="../index.html#ai">AI & Systems</a><a href="../index.html#case-studies">Case studies</a><a href="../index.html#work">Language work</a><a class="nav-cta" href="../index.html#contact">Contact</a></nav>
+</div></header>
+<main id="main">
+<section class="case-hero"><div class="wrap">
+<a class="back-link" href="../index.html#case-studies">← All case studies</a>
+<div class="section-kicker">CASE STUDY 03 / WORKFLOW AUTOMATION · DATA MIGRATION</div>
+<h1>Drive-to-Notion Migration Pipeline</h1>
+<p class="case-subtitle">A Google Apps Script pipeline that extracts supported document content, creates structured Notion pages and preserves links to original Google Drive files.</p>
+<div class="case-hero-meta"><div><strong>Technology</strong><span>Google Apps Script · Google Drive API · Notion API · Google Sheets</span></div><div><strong>Project status</strong><span>Used operationally · Error handling documented</span></div></div>
+</div></section>
+<section class="case-detail-content"><div class="wrap case-detail-layout">
+<article class="case-narrative">
+<section class="detail-section"><h2>The challenge</h2><p>The objective was to migrate a substantial document corpus from Google Drive into a more structured Notion environment without losing the relationship between migrated content and its original files. The workflow also had to accommodate Apps Script execution limits and differences in document and database schemas.</p></section><section class="detail-section"><h2>Workflow architecture</h2><ul><li>Retrieve documents to process from Google Drive.</li><li>Extract text from supported formats, including PDF and DOCX. Some formats were temporarily converted to Google Docs for extraction.</li><li>Create corresponding structured pages in Notion and preserve a reference to the original Drive file.</li><li>Move processed source files into a separate folder for later classification.</li><li>Use batch processing, timed resumption and Google Sheets execution logs to support runtime management and troubleshooting.</li></ul></section><section class="detail-section"><h2>Format handling and related workflow</h2><p>PNG and JPG images were retained as attachments or references; the documented workflow did not perform OCR on those images. A separate process migrated legacy nested Notion pages into a database-based structure; it was not a stage of the Drive-file pipeline.</p></section><section class="detail-section"><h2>Operational use and constraints</h2><p>The pipeline was reportedly used for approximately eight months and processed tens of thousands of files comprising multiple gigabytes. These figures are user-reported, not independently audited. Execution logs record Notion API validation errors, including filenames exceeding the 100-character limit for a file-name property. The logs do not establish that every historical error was eliminated. Duplicate detection was intentionally outside scope because it was not required for the use case.</p></section>
+<section class="detail-section"><h2>Skills demonstrated</h2><div class="skill-tags"><span class="skill-tag">Workflow automation</span><span class="skill-tag">REST API integration</span><span class="skill-tag">Document-content extraction</span><span class="skill-tag">Structured page creation</span><span class="skill-tag">Source traceability</span><span class="skill-tag">Batch processing and timed resumption</span><span class="skill-tag">Execution logging and API error diagnosis</span></div></section>
+<section class="takeaway-panel"><div class="section-kicker">Key takeaway</div><p>Migration is more than copying content: it requires extraction, structured record creation, source traceability and runtime-aware processing.</p></section>
+<a class="back-link bottom-back" href="../index.html#case-studies">← Back to all case studies</a>
+</article>
+<aside class="case-sidebar"><div class="sidebar-card"><div class="section-kicker">Project at a glance</div><h2>Drive-to-Notion Migration Pipeline</h2><p>Used operationally · Error handling documented</p><hr><strong>Technology</strong><p>Google Apps Script · Google Drive API · Notion API · Google Sheets</p><hr><a href="../index.html#contact" class="button primary">Discuss a similar challenge</a></div></aside>
+</div></section>
+</main>
+<footer class="footer"><div class="wrap footer-inner"><span>© Stéphanie Nadeau — Language, AI Systems & Workflow Automation</span><a href="../index.html#top">Back to portfolio ↑</a></div></footer>
+<script src="../js/site.js"></script>
+</body></html>
